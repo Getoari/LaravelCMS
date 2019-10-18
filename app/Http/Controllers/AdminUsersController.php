@@ -26,7 +26,7 @@ class AdminUsersController extends Controller
 //            echo $user->role['name'] . '<br/>';
 //        }
 
-        return view('admin.index', compact('users'));
+        return view('admin.users.index', compact('users'));
     }
 
     /**
