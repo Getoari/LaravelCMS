@@ -40,11 +40,18 @@
                 {!! Form::password('password', ['class' => 'form-control']) !!}
             </div>
 
-            <div class="form-group">
+            <div class="row col-sm-3">
                 {!! Form::submit('Edit User', ['class'=>'btn btn-primary']) !!}
             </div>
             {!! Form::close() !!}
+
+            {!! Form::open(['method'=>'DELETE', 'action'=> ['AdminUsersController@destroy', $user->id], ]) !!}
+            <div class="row col-sm-2">
+                {!! Form::submit('Delete User', ['class'=>'btn btn-danger']) !!}
+            </div>
+            {!! Form::close() !!}
         </div>
+
     </div>
     <div class="row">
         @include('includes.fom_error')

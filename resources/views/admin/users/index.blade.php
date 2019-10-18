@@ -1,6 +1,19 @@
 @extends('layouts.admin')
 
 @section('content')
+
+    @if(\Illuminate\Support\Facades\Session::has('deleted_user'))
+        <p class="alert alert-warning">{{ session('deleted_user') }}</p>
+    @endif
+
+    @if(\Illuminate\Support\Facades\Session::has('created_user'))
+        <p class="alert alert-success">{{ session('created_user') }}</p>
+    @endif
+
+    @if(\Illuminate\Support\Facades\Session::has('updated_user'))
+        <p class="alert alert-success">{{ session('updated_user') }}</p>
+    @endif
+
     <h1>Users</h1>
     <table class="table">
         <thead>
