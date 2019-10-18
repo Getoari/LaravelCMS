@@ -54,7 +54,7 @@
 
     </div>
     <div class="row">
-        @include('includes.fom_error')
+        @include('includes.form_error')
     </div>
 
 @stop
